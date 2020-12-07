@@ -71,5 +71,9 @@ namespace DrawMe
             MD = false;
         }
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            crntFigure.Check = checkBox1.Checked;
+        }
     }
 }

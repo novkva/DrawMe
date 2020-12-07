@@ -9,6 +9,7 @@ namespace DrawMe.Figures
 {
     interface IFigure
     {
+        bool Check { get; set; }
         Point[] GetPoints(Point[] points);
         void Draw(Graphics graphics, Pen pen, Point[] points);
     }

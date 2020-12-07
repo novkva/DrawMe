@@ -9,6 +9,7 @@ namespace DrawMe.Figures
 {
     public class RightTraingle : IFigure
     {
+        public bool Check { get; set; }
         public void Draw(Graphics graphics, Pen pen, Point[] points)
         {
             graphics.DrawPolygon(pen, points);
@@ -16,7 +17,19 @@ namespace DrawMe.Figures
 
         public Point[] GetPoints(Point[] points)
         {
+            return GetPointsCheck(points, Check);
+        }
+
+        private Point[] GetPointsCheck(Point[] points, bool check)
+        {
+            if (check)
+            {
             return MathSolve.SolveUpRightTriangle(points[0], points[1]);
+            }
+            else
+            {
+                return MathSolve.SolveDownRightTriangle(points[0], points[1]);
+            }
         }
     }
 }
