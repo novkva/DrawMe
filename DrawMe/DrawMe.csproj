@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Figures\IFigure.cs" />
+    <Compile Include="Figures\IsoscelesTraingles.cs" />
     <Compile Include="Figures\MathSolve.cs" />
+    <Compile Include="Figures\NUngles.cs" />
     <Compile Include="Figures\RightTraingle.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

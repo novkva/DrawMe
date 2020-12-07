@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DrawMe.Figures
+{
+    public class NAngles
+    {
+        int _ungles;
+        public Point StartPoint { get; set; }
+        bool Check { get; set; }
+        //Point[] GetPoints(Point[] points)
+        //{
+
+        //}
+        public void Draw(Graphics graphics, Pen pen, Point prevP, Point nowP)
+        {
+            graphics.DrawPolygon(pen, new Point[2] { prevP, nowP });
+        }
+    }
+}
