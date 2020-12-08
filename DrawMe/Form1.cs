@@ -23,6 +23,7 @@ namespace DrawMe
         IFigure crntFigure;
         NAngles nAngles; // change
         bool mCl;
+        int _amountPoint;
         public Form1()
         {
             InitializeComponent();
@@ -80,6 +81,7 @@ namespace DrawMe
         {
             crntFigure = new IsoscelesTraingles();
             checkBox1.Enabled = true;
+            mCl = false;
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -87,13 +89,14 @@ namespace DrawMe
             numericUpDown1.Enabled = true;
             nAngles = new NAngles(); // change
             mCl = true;
-            
+            _amountPoint = 0;
         }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
             if (mCl)
             {
+                nAngles.Ungles = (int)numericUpDown1.Value;
                 tmpbmp.Dispose();
                 tmpbmp = (Bitmap)bitmap.Clone();
                 graphics = Graphics.FromImage(tmpbmp);
@@ -102,6 +105,14 @@ namespace DrawMe
                 prevv = e.Location;
                 pictureBox1.Image = tmpbmp;
             }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            //numericUpDown1.Enabled = true;
+            nAngles = new NAngles(); // change
+            mCl = true;
+            _amountPoint = 0;
         }
     }
 }
