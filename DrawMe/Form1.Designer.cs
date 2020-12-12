@@ -63,7 +63,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(192, 49);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "kuku";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -175,6 +175,7 @@
             this.checkBox1.TabIndex = 13;
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Form1
             // 

@@ -7,3 +7,13 @@ C:\Users\Irochka\source\repos\DrawMe\DrawMe\obj\Debug\DrawMe.Properties.Resource
 C:\Users\Irochka\source\repos\DrawMe\DrawMe\obj\Debug\DrawMe.csproj.GenerateResource.cache
 C:\Users\Irochka\source\repos\DrawMe\DrawMe\obj\Debug\DrawMe.exe
 C:\Users\Irochka\source\repos\DrawMe\DrawMe\obj\Debug\DrawMe.pdb
+C:\Users\alena\source\repos\DrawMe\DrawMe\bin\Debug\DrawMe.exe.config
+C:\Users\alena\source\repos\DrawMe\DrawMe\bin\Debug\DrawMe.exe
+C:\Users\alena\source\repos\DrawMe\DrawMe\bin\Debug\DrawMe.pdb
+C:\Users\alena\source\repos\DrawMe\DrawMe\obj\Debug\DrawMe.csprojAssemblyReference.cache
+C:\Users\alena\source\repos\DrawMe\DrawMe\obj\Debug\DrawMe.Form1.resources
+C:\Users\alena\source\repos\DrawMe\DrawMe\obj\Debug\DrawMe.Properties.Resources.resources
+C:\Users\alena\source\repos\DrawMe\DrawMe\obj\Debug\DrawMe.csproj.GenerateResource.cache
+C:\Users\alena\source\repos\DrawMe\DrawMe\obj\Debug\DrawMe.csproj.CoreCompileInputs.cache
+C:\Users\alena\source\repos\DrawMe\DrawMe\obj\Debug\DrawMe.exe
+C:\Users\alena\source\repos\DrawMe\DrawMe\obj\Debug\DrawMe.pdb
