@@ -12,7 +12,7 @@ namespace DrawMe.Figures
         public static Point[] SolveUpIsoscelesTriangle(Point start, Point end)
         {
             Point three;
-            int x = start.X - (end.X - start.X);
+            int x = start.X + (end.X - start.X);
             three = new Point(x, end.Y);
             return new Point[] { start, end, three };
         }
