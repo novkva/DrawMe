@@ -63,7 +63,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(192, 49);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "kuku";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
