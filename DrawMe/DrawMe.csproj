@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\CircleFactory.cs" />
+    <Compile Include="Factories\EllipseFactory.cs" />
+    <Compile Include="Factories\IFactory.cs" />
+    <Compile Include="Factories\LineFactory.cs" />
+    <Compile Include="Factories\RectangleFactory.cs" />
+    <Compile Include="Factories\RightTraingleFactory.cs" />
     <Compile Include="Figures\IFigure.cs" />
     <Compile Include="Figures\IsoscelesTraingles.cs" />
     <Compile Include="Figures\MathSolve.cs" />

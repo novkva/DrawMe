@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DrawMe.Figures
 {
-    interface IFigure
+    public interface IFigure
     {
         bool Check { get; set; }
         Point[] GetPoints(Point[] points);

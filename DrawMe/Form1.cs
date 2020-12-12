@@ -21,7 +21,7 @@ namespace DrawMe
         bool MD;
         Bitmap tmpbmp;
         IFigure crntFigure;
-        NAngles nAngles; // change
+        //I nAngles; // change
         bool mCl;
         int _amountPoint;
         public Form1()
@@ -63,6 +63,7 @@ namespace DrawMe
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
             bitmap = (Bitmap)tmpbmp.Clone();
+            prev = e.Location;
             MD = false;
         }
 
@@ -87,32 +88,37 @@ namespace DrawMe
         private void button11_Click(object sender, EventArgs e)
         {
             numericUpDown1.Enabled = true;
-            nAngles = new NAngles(); // change
+            crntFigure = new NAngles(); // change
+            crntFigure = (NAngles)crntFigure;
             mCl = true;
             _amountPoint = 0;
         }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            if (mCl)
-            {
-                nAngles.Ungles = (int)numericUpDown1.Value;
-                tmpbmp.Dispose();
-                tmpbmp = (Bitmap)bitmap.Clone();
-                graphics = Graphics.FromImage(tmpbmp);
-                pictureBox1.BackColor = Color.Azure;
-                nAngles.Draw(graphics, pen, prevv, e.Location);
-                prevv = e.Location;
-                pictureBox1.Image = tmpbmp;
-            }
+            //if (mCl)
+            //{
+            //    nAngles.Ungles = (int)numericUpDown1.Value;
+            //    tmpbmp.Dispose();
+            //    tmpbmp = (Bitmap)bitmap.Clone();
+            //    graphics = Graphics.FromImage(tmpbmp);
+            //    pictureBox1.BackColor = Color.Azure;
+            //    nAngles.Draw(graphics, pen, prevv, e.Location);
+            //    prevv = e.Location;
+            //    pictureBox1.Image = tmpbmp;
+            //}
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            //numericUpDown1.Enabled = true;
-            nAngles = new NAngles(); // change
+            crntFigure = new NAngles(); // change
             mCl = true;
             _amountPoint = 0;
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            crntFigure = (NAngles)crntFigure;
         }
     }
 }
