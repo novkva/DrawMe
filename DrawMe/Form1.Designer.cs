@@ -44,7 +44,18 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button13 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.red = new System.Windows.Forms.Button();
+            this.green = new System.Windows.Forms.Button();
+            this.purple = new System.Windows.Forms.Button();
+            this.orange = new System.Windows.Forms.Button();
+            this.blue = new System.Windows.Forms.Button();
+            this.darkBlue = new System.Windows.Forms.Button();
+            this.yellow = new System.Windows.Forms.Button();
+            this.black = new System.Windows.Forms.Button();
+            this.white = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -199,12 +210,121 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Панель инструментов:";
             // 
+            // red
+            // 
+            this.red.BackColor = System.Drawing.Color.Red;
+            this.red.Location = new System.Drawing.Point(285, 176);
+            this.red.Name = "red";
+            this.red.Size = new System.Drawing.Size(52, 49);
+            this.red.TabIndex = 16;
+            this.red.UseVisualStyleBackColor = false;
+            // 
+            // green
+            // 
+            this.green.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.green.Location = new System.Drawing.Point(285, 341);
+            this.green.Name = "green";
+            this.green.Size = new System.Drawing.Size(52, 49);
+            this.green.TabIndex = 17;
+            this.green.UseVisualStyleBackColor = false;
+            // 
+            // purple
+            // 
+            this.purple.BackColor = System.Drawing.Color.Purple;
+            this.purple.Location = new System.Drawing.Point(285, 506);
+            this.purple.Name = "purple";
+            this.purple.Size = new System.Drawing.Size(52, 49);
+            this.purple.TabIndex = 18;
+            this.purple.UseVisualStyleBackColor = false;
+            this.purple.Click += new System.EventHandler(this.purple_Click);
+            // 
+            // orange
+            // 
+            this.orange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.orange.Location = new System.Drawing.Point(285, 231);
+            this.orange.Name = "orange";
+            this.orange.Size = new System.Drawing.Size(52, 49);
+            this.orange.TabIndex = 19;
+            this.orange.UseVisualStyleBackColor = false;
+            // 
+            // blue
+            // 
+            this.blue.BackColor = System.Drawing.Color.Aqua;
+            this.blue.Location = new System.Drawing.Point(285, 396);
+            this.blue.Name = "blue";
+            this.blue.Size = new System.Drawing.Size(52, 49);
+            this.blue.TabIndex = 20;
+            this.blue.UseVisualStyleBackColor = false;
+            // 
+            // darkBlue
+            // 
+            this.darkBlue.BackColor = System.Drawing.Color.Blue;
+            this.darkBlue.Location = new System.Drawing.Point(285, 451);
+            this.darkBlue.Name = "darkBlue";
+            this.darkBlue.Size = new System.Drawing.Size(52, 49);
+            this.darkBlue.TabIndex = 21;
+            this.darkBlue.UseVisualStyleBackColor = false;
+            // 
+            // yellow
+            // 
+            this.yellow.BackColor = System.Drawing.Color.Yellow;
+            this.yellow.Location = new System.Drawing.Point(285, 286);
+            this.yellow.Name = "yellow";
+            this.yellow.Size = new System.Drawing.Size(52, 49);
+            this.yellow.TabIndex = 22;
+            this.yellow.UseVisualStyleBackColor = false;
+            // 
+            // black
+            // 
+            this.black.BackColor = System.Drawing.Color.Black;
+            this.black.Location = new System.Drawing.Point(227, 562);
+            this.black.Name = "black";
+            this.black.Size = new System.Drawing.Size(52, 49);
+            this.black.TabIndex = 23;
+            this.black.UseVisualStyleBackColor = false;
+            // 
+            // white
+            // 
+            this.white.BackColor = System.Drawing.Color.White;
+            this.white.Location = new System.Drawing.Point(285, 562);
+            this.white.Name = "white";
+            this.white.Size = new System.Drawing.Size(52, 49);
+            this.white.TabIndex = 24;
+            this.white.UseVisualStyleBackColor = false;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(225, 190);
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(54, 22);
+            this.numericUpDown1.TabIndex = 25;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1393, 798);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.white);
+            this.Controls.Add(this.black);
+            this.Controls.Add(this.yellow);
+            this.Controls.Add(this.darkBlue);
+            this.Controls.Add(this.blue);
+            this.Controls.Add(this.orange);
+            this.Controls.Add(this.purple);
+            this.Controls.Add(this.green);
+            this.Controls.Add(this.red);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.checkBox1);
@@ -225,6 +345,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,6 +369,16 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button red;
+        private System.Windows.Forms.Button green;
+        private System.Windows.Forms.Button purple;
+        private System.Windows.Forms.Button orange;
+        private System.Windows.Forms.Button blue;
+        private System.Windows.Forms.Button darkBlue;
+        private System.Windows.Forms.Button yellow;
+        private System.Windows.Forms.Button black;
+        private System.Windows.Forms.Button white;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 
