@@ -13,14 +13,17 @@ namespace DrawMe
 {
     public partial class Form1 : Form
     {
-        Bitmap bitmap;
+        Bitmap _mainBM;
+        Bitmap _tmpBM;
+        Graphics _graphics;
+
+        AbstractFigure _crntFigure;
+        Color _crntColor;
+        int _crntWidth;
+
         Pen pen;
         Point prev;
-        Graphics graphics;
         bool MD;
-        Bitmap tmpbmp;
-        bool shi;
-        IFigure crntFigure;
         public Form1()
         {
             InitializeComponent();
@@ -28,32 +31,30 @@ namespace DrawMe
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            bitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-            tmpbmp = (Bitmap)bitmap.Clone();
-            graphics = Graphics.FromImage(bitmap);
-            pen = new Pen(Color.Black, 1);
+            _mainBM = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            _graphics = Graphics.FromImage(_mainBM);
+            _tmpBM = (Bitmap)_mainBM.Clone();
+            _crntColor = Color.Black;
+            _crntWidth = 1;
+
+            _crntFigure = new BrushFigure(); // на старте задаем кисть
+            _crntFigure.Width = _crntWidth;
+            _crntFigure.Color = _crntColor;
+
+            pen = new Pen(_crntColor, _crntWidth); // хз это наверно вообще не нужно
             prev = new Point(0, 0);
             MD = false;
-            shi = false;
-        }
-        private void button9_Click(object sender, EventArgs e)
-        {
-            crntFigure = new RightTraingle();
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
             if (MD)
             {
-                tmpbmp.Dispose();
-                tmpbmp = (Bitmap)bitmap.Clone();
-                graphics = Graphics.FromImage(tmpbmp);
-                //graphics.Clear(Color.FromArgb(192, 192, 255));
-                //graphics.DrawPolygon(pen, crntFigure.GetPoints(new Point[] { prev, e.Location }));
-                crntFigure.Draw(graphics, pen, crntFigure.GetPoints(new Point[] { prev, e.Location }));
-
-                //graphics.DrawLine(pen, prev, e.Location);
-                pictureBox1.Image = tmpbmp;
+                _tmpBM.Dispose();
+                _tmpBM = (Bitmap)_mainBM.Clone();
+                _graphics = Graphics.FromImage(_tmpBM);
+                ///rntFigure.Draw(graphics, pen, crntFigure.DoPoint(new Point[] { prev, e.Location }));
+                pictureBox1.Image = _tmpBM;
                 //prev = e.Location;
 
             }
@@ -67,10 +68,25 @@ namespace DrawMe
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            bitmap = (Bitmap)tmpbmp.Clone();
+            _mainBM = (Bitmap)_tmpBM.Clone();
             MD = false;
         }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+            _crntFigure = new RightTraingle();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void purple_Click(object sender, EventArgs e)
+        {
+            _crntColor = Color.Purple;
+            _crntFigure.Color = _crntColor;
+        }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 

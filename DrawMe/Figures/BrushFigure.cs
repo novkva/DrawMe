@@ -2,21 +2,18 @@
 using DrawMe.Solves;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DrawMe.Figures
 {
-    public class RightTraingle : AbstractFigure
+    public class BrushFigure : AbstractFigure
     {
-        public RightTraingle()
+        public BrushFigure()
         {
-            drawing = new DrawByPoligon();
-            solves = new RightTraingleSolve();
+            drawing = new DrawByLine();
+            solves = new BrushSolve();
         }
-
-      
     }
 }
