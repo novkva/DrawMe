@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DrawMe.Drawing
+namespace DrawMe.Solves
 {
-    class DrawByLine : IDrawing
+    class IsoscelesTraingleSolve
     {
-        public void DrawFigure()
-        {
-            //
-        }
     }
 }

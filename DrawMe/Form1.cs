@@ -55,7 +55,7 @@ namespace DrawMe
                 _graphics = Graphics.FromImage(_tmpBM);
                 ///rntFigure.Draw(graphics, pen, crntFigure.DoPoint(new Point[] { prev, e.Location }));
                 pictureBox1.Image = _tmpBM;
-                //prev = e.Location;
+                
 
             }
         }
@@ -68,13 +68,15 @@ namespace DrawMe
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            _mainBM = (Bitmap)_tmpBM.Clone();
+            //_mainBM = (Bitmap)_tmpBM.Clone();
             MD = false;
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void rightTraingle_Click(object sender, EventArgs e)
         {
             _crntFigure = new RightTraingle();
+            _crntFigure.Color = _crntColor;
+            _crntFigure.Width = _crntWidth;
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -90,6 +92,13 @@ namespace DrawMe
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void isoscelesTraingle_Click(object sender, EventArgs e)
+        {
+            _crntFigure = new IsoscelesTraingleFigure();
+            _crntFigure.Color = _crntColor;
+            _crntFigure.Width = _crntWidth;
         }
     }
 }

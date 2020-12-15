@@ -37,8 +37,8 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.rightTraingle = new System.Windows.Forms.Button();
+            this.isoscelesTraingle = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -142,24 +142,25 @@
             this.button8.Text = "Треугольник по трем";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // rightTraingle
             // 
-            this.button9.Location = new System.Drawing.Point(12, 562);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(192, 49);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "Треугольник 90";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.rightTraingle.Location = new System.Drawing.Point(12, 562);
+            this.rightTraingle.Name = "rightTraingle";
+            this.rightTraingle.Size = new System.Drawing.Size(192, 49);
+            this.rightTraingle.TabIndex = 9;
+            this.rightTraingle.Text = "Треугольник 90";
+            this.rightTraingle.UseVisualStyleBackColor = true;
+            this.rightTraingle.Click += new System.EventHandler(this.rightTraingle_Click);
             // 
-            // button10
+            // isoscelesTraingle
             // 
-            this.button10.Location = new System.Drawing.Point(12, 617);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(192, 49);
-            this.button10.TabIndex = 10;
-            this.button10.Text = "Равнобедренный";
-            this.button10.UseVisualStyleBackColor = true;
+            this.isoscelesTraingle.Location = new System.Drawing.Point(12, 617);
+            this.isoscelesTraingle.Name = "isoscelesTraingle";
+            this.isoscelesTraingle.Size = new System.Drawing.Size(192, 49);
+            this.isoscelesTraingle.TabIndex = 10;
+            this.isoscelesTraingle.Text = "Равнобедренный";
+            this.isoscelesTraingle.UseVisualStyleBackColor = true;
+            this.isoscelesTraingle.Click += new System.EventHandler(this.isoscelesTraingle_Click);
             // 
             // button11
             // 
@@ -330,8 +331,8 @@
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
+            this.Controls.Add(this.isoscelesTraingle);
+            this.Controls.Add(this.rightTraingle);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -362,8 +363,8 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button rightTraingle;
+        private System.Windows.Forms.Button isoscelesTraingle;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.CheckBox checkBox1;
