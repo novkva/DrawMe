@@ -98,6 +98,13 @@ namespace DrawMe
 
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            _crntFigure = new RectangleFigure();
+            _crntFigure.Color = _crntColor;
+            _crntFigure.Width = _crntWidth;
+        }
+
         private void isoscelesTraingle_Click(object sender, EventArgs e)
         {
             _crntFigure = new IsoscelesTraingleFigure();
