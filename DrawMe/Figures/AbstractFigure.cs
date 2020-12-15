@@ -15,17 +15,29 @@ namespace DrawMe.Figures
         public List<Point> Points { get; set; }
         public IDrawing drawing;
         public ISolves solves;
-        public void Draw(Graphics graphics, Pen pen, Point[] points)
+        public void Draw(Point crnt, Bitmap mainBM)
         {
-            drawing.DrawFigure();
+            Points = new List<Point>(solves.DoPoint(new Point[] { drawing.startPoint, crnt }));
+            drawing.DrawFigure(Color, Width, Points.ToArray(), mainBM);
         }
 
-        public static void MouseMoving()
+        public Bitmap ShowBit()
         {
-
+            return drawing.crntBit;
         }
-        public static void MouseDown()
+
+        public void DoStart(Point startPoint)
         {
+            drawing.startPoint = startPoint;
+        }
+
+        public static void MouseMoving(AbstractFigure crntFigure, Point crnt, Bitmap mainBM)
+        {
+            crntFigure.Draw(crnt, mainBM);
+        }
+        public static void MouseDown(AbstractFigure abstractFigure, Point startPoint)
+        {
+            abstractFigure.DoStart(startPoint);
 
         }
         public static void MouseUp()
