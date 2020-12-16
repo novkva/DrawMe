@@ -42,7 +42,7 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button13 = new System.Windows.Forms.Button();
+            this.clear = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.red = new System.Windows.Forms.Button();
             this.green = new System.Windows.Forms.Button();
@@ -53,9 +53,9 @@
             this.yellow = new System.Windows.Forms.Button();
             this.black = new System.Windows.Forms.Button();
             this.white = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.widthBox = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.widthBox)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -192,14 +192,15 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // button13
+            // clear
             // 
-            this.button13.Location = new System.Drawing.Point(225, 121);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(112, 49);
-            this.button13.TabIndex = 14;
-            this.button13.Text = "Очистить форму";
-            this.button13.UseVisualStyleBackColor = true;
+            this.clear.Location = new System.Drawing.Point(225, 121);
+            this.clear.Name = "clear";
+            this.clear.Size = new System.Drawing.Size(112, 49);
+            this.clear.TabIndex = 14;
+            this.clear.Text = "Очистить форму";
+            this.clear.UseVisualStyleBackColor = true;
+            this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
             // label1
             // 
@@ -293,22 +294,23 @@
             this.white.TabIndex = 24;
             this.white.UseVisualStyleBackColor = false;
             // 
-            // numericUpDown1
+            // widthBox
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(225, 190);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.widthBox.Location = new System.Drawing.Point(225, 190);
+            this.widthBox.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(54, 22);
-            this.numericUpDown1.TabIndex = 25;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.widthBox.Name = "widthBox";
+            this.widthBox.Size = new System.Drawing.Size(54, 22);
+            this.widthBox.TabIndex = 25;
+            this.widthBox.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.widthBox.ValueChanged += new System.EventHandler(this.widthBox_ValueChanged);
             // 
             // Form1
             // 
@@ -316,7 +318,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1393, 798);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.widthBox);
             this.Controls.Add(this.white);
             this.Controls.Add(this.black);
             this.Controls.Add(this.yellow);
@@ -327,7 +329,7 @@
             this.Controls.Add(this.green);
             this.Controls.Add(this.red);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button13);
+            this.Controls.Add(this.clear);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
@@ -346,7 +348,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.widthBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,7 +370,7 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button clear;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button red;
         private System.Windows.Forms.Button green;
@@ -379,7 +381,7 @@
         private System.Windows.Forms.Button yellow;
         private System.Windows.Forms.Button black;
         private System.Windows.Forms.Button white;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown widthBox;
     }
 }
 

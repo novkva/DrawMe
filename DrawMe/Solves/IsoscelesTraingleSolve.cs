@@ -12,7 +12,7 @@ namespace DrawMe.Solves
         public Point[] DoPoint(Point[] points)
         {
             Point three;
-            int x = points[0].X + (points[1].X - points[0].X);
+            int x = points[0].X - (points[1].X - points[0].X);
             three = new Point(x, points[1].Y);
             return new Point[] { points[0], points[1], three };
         }

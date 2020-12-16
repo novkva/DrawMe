@@ -50,6 +50,10 @@
     <Compile Include="Drawing\DrawByLine.cs" />
     <Compile Include="Drawing\DrawByPoligon.cs" />
     <Compile Include="Drawing\IDrawing.cs" />
+    <Compile Include="Factory\BrushFactory.cs" />
+    <Compile Include="Factory\IFactory.cs" />
+    <Compile Include="Factory\IsoscelesTraingleFactory.cs" />
+    <Compile Include="Factory\RightTraingleFactory.cs" />
     <Compile Include="Figures\AbstractFigure.cs" />
     <Compile Include="Figures\BrushFigure.cs" />
     <Compile Include="Figures\IsoscelesTraingleFigure.cs" />
