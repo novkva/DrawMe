@@ -17,3 +17,13 @@ C:\Users\alena\source\repos\DrawMe\DrawMe\obj\Debug\DrawMe.csproj.GenerateResour
 C:\Users\alena\source\repos\DrawMe\DrawMe\obj\Debug\DrawMe.csproj.CoreCompileInputs.cache
 C:\Users\alena\source\repos\DrawMe\DrawMe\obj\Debug\DrawMe.exe
 C:\Users\alena\source\repos\DrawMe\DrawMe\obj\Debug\DrawMe.pdb
+C:\Users\zemts\Desktop\DrawMe-main\Draw\DrawMe\bin\Debug\DrawMe.exe.config
+C:\Users\zemts\Desktop\DrawMe-main\Draw\DrawMe\bin\Debug\DrawMe.exe
+C:\Users\zemts\Desktop\DrawMe-main\Draw\DrawMe\bin\Debug\DrawMe.pdb
+C:\Users\zemts\Desktop\DrawMe-main\Draw\DrawMe\obj\Debug\DrawMe.csprojAssemblyReference.cache
+C:\Users\zemts\Desktop\DrawMe-main\Draw\DrawMe\obj\Debug\DrawMe.Form1.resources
+C:\Users\zemts\Desktop\DrawMe-main\Draw\DrawMe\obj\Debug\DrawMe.Properties.Resources.resources
+C:\Users\zemts\Desktop\DrawMe-main\Draw\DrawMe\obj\Debug\DrawMe.csproj.GenerateResource.cache
+C:\Users\zemts\Desktop\DrawMe-main\Draw\DrawMe\obj\Debug\DrawMe.csproj.CoreCompileInputs.cache
+C:\Users\zemts\Desktop\DrawMe-main\Draw\DrawMe\obj\Debug\DrawMe.exe
+C:\Users\zemts\Desktop\DrawMe-main\Draw\DrawMe\obj\Debug\DrawMe.pdb

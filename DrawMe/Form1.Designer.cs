@@ -30,19 +30,19 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.line = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.rightTraingle = new System.Windows.Forms.Button();
+            this.isoscelesTraingle = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button13 = new System.Windows.Forms.Button();
+            this.clear = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.red = new System.Windows.Forms.Button();
             this.green = new System.Windows.Forms.Button();
@@ -53,17 +53,20 @@
             this.yellow = new System.Windows.Forms.Button();
             this.black = new System.Windows.Forms.Button();
             this.white = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.widthBox = new System.Windows.Forms.NumericUpDown();
+            this.mover = new System.Windows.Forms.Button();
+            this.rotate = new System.Windows.Forms.Button();
+            this.changeColor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.widthBox)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(355, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(355, 121);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1013, 734);
+            this.pictureBox1.Size = new System.Drawing.Size(1013, 655);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
@@ -79,14 +82,15 @@
             this.button1.Text = "Кисть";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // line
             // 
-            this.button2.Location = new System.Drawing.Point(12, 176);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(192, 49);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Линия";
-            this.button2.UseVisualStyleBackColor = true;
+            this.line.Location = new System.Drawing.Point(12, 176);
+            this.line.Name = "line";
+            this.line.Size = new System.Drawing.Size(192, 49);
+            this.line.TabIndex = 2;
+            this.line.Text = "Линия";
+            this.line.UseVisualStyleBackColor = true;
+            this.line.Click += new System.EventHandler(this.line_Click);
             // 
             // button3
             // 
@@ -105,6 +109,7 @@
             this.button4.TabIndex = 4;
             this.button4.Text = "Прямоугольник";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -142,24 +147,25 @@
             this.button8.Text = "Треугольник по трем";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // rightTraingle
             // 
-            this.button9.Location = new System.Drawing.Point(12, 562);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(192, 49);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "Треугольник 90";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.rightTraingle.Location = new System.Drawing.Point(12, 562);
+            this.rightTraingle.Name = "rightTraingle";
+            this.rightTraingle.Size = new System.Drawing.Size(192, 49);
+            this.rightTraingle.TabIndex = 9;
+            this.rightTraingle.Text = "Треугольник 90";
+            this.rightTraingle.UseVisualStyleBackColor = true;
+            this.rightTraingle.Click += new System.EventHandler(this.rightTraingle_Click);
             // 
-            // button10
+            // isoscelesTraingle
             // 
-            this.button10.Location = new System.Drawing.Point(12, 617);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(192, 49);
-            this.button10.TabIndex = 10;
-            this.button10.Text = "Равнобедренный";
-            this.button10.UseVisualStyleBackColor = true;
+            this.isoscelesTraingle.Location = new System.Drawing.Point(12, 617);
+            this.isoscelesTraingle.Name = "isoscelesTraingle";
+            this.isoscelesTraingle.Size = new System.Drawing.Size(192, 49);
+            this.isoscelesTraingle.TabIndex = 10;
+            this.isoscelesTraingle.Text = "Равнобедренный";
+            this.isoscelesTraingle.UseVisualStyleBackColor = true;
+            this.isoscelesTraingle.Click += new System.EventHandler(this.isoscelesTraingle_Click);
             // 
             // button11
             // 
@@ -191,14 +197,16 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // button13
+            // clear
             // 
-            this.button13.Location = new System.Drawing.Point(225, 121);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(112, 49);
-            this.button13.TabIndex = 14;
-            this.button13.Text = "Очистить форму";
-            this.button13.UseVisualStyleBackColor = true;
+            this.clear.Location = new System.Drawing.Point(237, 121);
+            this.clear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.clear.Name = "clear";
+            this.clear.Size = new System.Drawing.Size(100, 39);
+            this.clear.TabIndex = 14;
+            this.clear.Text = "Очистить форму";
+            this.clear.UseVisualStyleBackColor = true;
+            this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
             // label1
             // 
@@ -292,30 +300,64 @@
             this.white.TabIndex = 24;
             this.white.UseVisualStyleBackColor = false;
             // 
-            // numericUpDown1
+            // widthBox
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(225, 190);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.widthBox.Location = new System.Drawing.Point(237, 176);
+            this.widthBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.widthBox.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(54, 22);
-            this.numericUpDown1.TabIndex = 25;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.widthBox.Name = "widthBox";
+            this.widthBox.Size = new System.Drawing.Size(48, 22);
+            this.widthBox.TabIndex = 25;
+            this.widthBox.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.widthBox.ValueChanged += new System.EventHandler(this.widthBox_ValueChanged);
+            // 
+            // mover
+            // 
+            this.mover.Location = new System.Drawing.Point(355, 42);
+            this.mover.Name = "mover";
+            this.mover.Size = new System.Drawing.Size(192, 49);
+            this.mover.TabIndex = 26;
+            this.mover.Text = "Двигай";
+            this.mover.UseVisualStyleBackColor = true;
+            this.mover.Click += new System.EventHandler(this.mover_Click);
+            // 
+            // rotate
+            // 
+            this.rotate.Location = new System.Drawing.Point(576, 42);
+            this.rotate.Name = "rotate";
+            this.rotate.Size = new System.Drawing.Size(192, 49);
+            this.rotate.TabIndex = 27;
+            this.rotate.Text = "Вращай";
+            this.rotate.UseVisualStyleBackColor = true;
+            // 
+            // changeColor
+            // 
+            this.changeColor.Location = new System.Drawing.Point(793, 42);
+            this.changeColor.Name = "changeColor";
+            this.changeColor.Size = new System.Drawing.Size(192, 49);
+            this.changeColor.TabIndex = 28;
+            this.changeColor.Text = "Меняй цвет";
+            this.changeColor.UseVisualStyleBackColor = true;
+            this.changeColor.Click += new System.EventHandler(this.changeColor_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1393, 798);
-            this.Controls.Add(this.numericUpDown1);
+            this.ClientSize = new System.Drawing.Size(1238, 638);
+            this.Controls.Add(this.changeColor);
+            this.Controls.Add(this.rotate);
+            this.Controls.Add(this.mover);
+            this.Controls.Add(this.widthBox);
             this.Controls.Add(this.white);
             this.Controls.Add(this.black);
             this.Controls.Add(this.yellow);
@@ -326,26 +368,26 @@
             this.Controls.Add(this.green);
             this.Controls.Add(this.red);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button13);
+            this.Controls.Add(this.clear);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
+            this.Controls.Add(this.isoscelesTraingle);
+            this.Controls.Add(this.rightTraingle);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.line);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.widthBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,19 +397,19 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button line;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button rightTraingle;
+        private System.Windows.Forms.Button isoscelesTraingle;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button clear;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button red;
         private System.Windows.Forms.Button green;
@@ -378,7 +420,10 @@
         private System.Windows.Forms.Button yellow;
         private System.Windows.Forms.Button black;
         private System.Windows.Forms.Button white;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown widthBox;
+        private System.Windows.Forms.Button mover;
+        private System.Windows.Forms.Button rotate;
+        private System.Windows.Forms.Button changeColor;
     }
 }
 

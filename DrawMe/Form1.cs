@@ -1,4 +1,5 @@
-﻿using DrawMe.Figures;
+﻿using DrawMe.Factory;
+using DrawMe.Figures;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DrawMe.Canvases;
 
 namespace DrawMe
 {
@@ -15,15 +17,18 @@ namespace DrawMe
     {
         Bitmap _mainBM;
         Bitmap _tmpBM;
-        Graphics _graphics;
 
         AbstractFigure _crntFigure;
         Color _crntColor;
         int _crntWidth;
+        List<AbstractFigure> _figures;
+        IFactory _factory;
+        Graphics graphics;
 
+        string action;
         Pen pen;
         Point prev;
-        bool MD;
+        bool _MD;
         public Form1()
         {
             InitializeComponent();
@@ -31,50 +36,113 @@ namespace DrawMe
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            _mainBM = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-            _graphics = Graphics.FromImage(_mainBM);
-            _tmpBM = (Bitmap)_mainBM.Clone();
+            //_mainBM = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            Canvas.Instanse.SetBitmap(new Bitmap(pictureBox1.Width, pictureBox1.Height));
+            
+            
+            
+            //_tmpBM = (Bitmap)_mainBM.Clone();
             _crntColor = Color.Black;
             _crntWidth = 1;
+            _figures = new List<AbstractFigure>();
 
-            _crntFigure = new BrushFigure(); // на старте задаем кисть
-            _crntFigure.Width = _crntWidth;
-            _crntFigure.Color = _crntColor;
+            _factory = new BrushFactory(); // на старте задаем кисть 
 
             pen = new Pen(_crntColor, _crntWidth); // хз это наверно вообще не нужно
             prev = new Point(0, 0);
-            MD = false;
+            _MD = false;
+            action = "Draw";
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (MD)
+            if (_MD)
             {
-                _tmpBM.Dispose();
-                _tmpBM = (Bitmap)_mainBM.Clone();
-                _graphics = Graphics.FromImage(_tmpBM);
-                ///rntFigure.Draw(graphics, pen, crntFigure.DoPoint(new Point[] { prev, e.Location }));
-                pictureBox1.Image = _tmpBM;
-                //prev = e.Location;
+                switch (action)
+                {
+                    case "Draw":
+                _crntFigure.Draw(e.Location, _mainBM);
+                        break;
+                    case "Mover":
 
+                        _crntFigure.Move(e.Location, _mainBM);
+                        break;
+                }
+                pictureBox1.Image = Canvas.Instanse.GetBitmap();
+                pictureBox1.Image = Canvas.Instanse.GetTempBitmap();
             }
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            prev = e.Location;
-            MD = true;
+            _MD = true;
+            switch (action)
+            {
+                case "Draw":
+                    _crntFigure = _factory.CreateFigure();
+                    _crntFigure.Color = _crntColor;
+                    _crntFigure.Width = _crntWidth;
+                    _crntFigure.DoStart(e.Location);
+                    break;
+                case "Mover":
+                    
+                    foreach (AbstractFigure figure in _figures)
+                    {
+                        if (figure.CheckFigure(e.Location))
+                        {
+                            _crntFigure = null;
+                            _crntFigure = figure;
+                            _figures.Remove(_crntFigure);
+                            DrawAll();
+                    _crntFigure.DoStart(e.Location);
+                            break;
+                        }
+                    }
+                    break;
+                case "ChangeColor":
+                    _figures.Remove(_crntFigure);
+                    DrawAll();
+                    _crntFigure.ChangeColor(_crntColor, _mainBM);
+                    pictureBox1.Image = _crntFigure.ShowBit();
+                    break;
+            }
+            
+            
+            //_crntFigure.drawing.crntBit = (Bitmap)_mainBM.Clone();
+            //prev = e.Location;
+        }
+
+        private void DrawAll()
+        {
+            _mainBM = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            graphics = Graphics.FromImage(_mainBM);
+
+            foreach (AbstractFigure figure in _figures)
+            {
+                pen.Color = figure.Color;
+                pen.Width = figure.Width;
+                graphics.DrawPolygon(pen, figure.Points.ToArray());
+            }
+
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            _mainBM = (Bitmap)_tmpBM.Clone();
-            MD = false;
+
+            _MD = false;
+            
+          
+            if (_crntFigure.CheckDraw())
+            {
+                _figures.Add(_crntFigure);
+            }
+            Canvas.Instanse.SetBitmap(Canvas.Instanse.GetTempBitmap());
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void rightTraingle_Click(object sender, EventArgs e)
         {
-            _crntFigure = new RightTraingle();
+            _factory = new RightTraingleFactory();
+            action = "Draw";
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -85,11 +153,52 @@ namespace DrawMe
         private void purple_Click(object sender, EventArgs e)
         {
             _crntColor = Color.Purple;
-            _crntFigure.Color = _crntColor;
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            _crntFigure = new RectangleFigure();
+            _crntFigure.Color = _crntColor;
+            _crntFigure.Width = _crntWidth;
+        }
+
+        private void isoscelesTraingle_Click(object sender, EventArgs e)
+        {
+            _factory = new IsoscelesTraingleFactory();
+            action = "Draw";
+
+        }
+
+        private void clear_Click(object sender, EventArgs e)
+        {
+            _mainBM = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            pictureBox1.Image = _mainBM;
+            _figures = new List<AbstractFigure>();
+        }
+
+        private void widthBox_ValueChanged(object sender, EventArgs e)
+        {
+            _crntWidth = (int)widthBox.Value;
+        }
+
+        private void mover_Click(object sender, EventArgs e)
+        {
+            action = "Mover";
+        }
+
+        private void line_Click(object sender, EventArgs e)
+        {
+            _factory = new LineFactory();
+            action = "Draw";
+        }
+
+        private void changeColor_Click(object sender, EventArgs e)
+        {
+            action = "ChangeColor";
         }
     }
 }
