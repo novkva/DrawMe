@@ -153,15 +153,6 @@ namespace DrawMe
         private void purple_Click(object sender, EventArgs e)
         {
             _crntColor = Color.Purple;
-            //if (action.Equals("ChangeColor"))
-            //{
-            //    _figures.Remove(_crntFigure);
-            //    DrawAll();
-            //    _crntFigure.ChangeColor(_crntColor, _mainBM);
-            //    pictureBox1.Image = _crntFigure.ShowBit();
-            //    _mainBM = (Bitmap)_crntFigure.ShowBit().Clone();
-            //}
-            //_crntFigure.Color = _crntColor;
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
