@@ -4643,19 +4643,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Irochka\\.nuget\\packages\\": {}
+    "C:\\Users\\zemts\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Irochka\\source\\repos\\DrawMe\\DrawingTest\\DrawMeTests.csproj",
+      "projectUniqueName": "C:\\Users\\zemts\\Desktop\\DrawMe\\DrawingTest\\DrawMeTests.csproj",
       "projectName": "DrawMeTests",
-      "projectPath": "C:\\Users\\Irochka\\source\\repos\\DrawMe\\DrawingTest\\DrawMeTests.csproj",
-      "packagesPath": "C:\\Users\\Irochka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Irochka\\source\\repos\\DrawMe\\DrawingTest\\obj\\",
+      "projectPath": "C:\\Users\\zemts\\Desktop\\DrawMe\\DrawingTest\\DrawMeTests.csproj",
+      "packagesPath": "C:\\Users\\zemts\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\zemts\\Desktop\\DrawMe\\DrawingTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Irochka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\zemts\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4668,8 +4668,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Irochka\\source\\repos\\DrawMe\\DrawMe\\DrawMe.csproj": {
-              "projectPath": "C:\\Users\\Irochka\\source\\repos\\DrawMe\\DrawMe\\DrawMe.csproj"
+            "C:\\Users\\zemts\\Desktop\\DrawMe\\DrawMe\\DrawMe.csproj": {
+              "projectPath": "C:\\Users\\zemts\\Desktop\\DrawMe\\DrawMe\\DrawMe.csproj"
             }
           }
         }
@@ -4711,7 +4711,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

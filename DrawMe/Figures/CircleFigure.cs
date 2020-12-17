@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 
 namespace DrawMe.Figures
 {
-    public class RectangleFigure : AbstractFigure
+    public class CircleFigure : AbstractFigure
     {
-        public RectangleFigure()
-        {
-            drawing = new DrawByPoligon();
-            solves = new RectangleSolve();
-        }
+        //public CircleFigure()
+        //{
+        //    drawing = new DrawByPoligon();
+        //    solves = new CircleSolve();
+        //}
     }
 }
+

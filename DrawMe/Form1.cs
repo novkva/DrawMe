@@ -105,9 +105,11 @@ namespace DrawMe
 
         private void button4_Click(object sender, EventArgs e)
         {
-            _crntFigure = new RectangleFigure();
-            _crntFigure.Color = _crntColor;
-            _crntFigure.Width = _crntWidth;
+            factory = new RictangleFactory();
+            //_crntFigure = new RectangleFigure();
+            //_crntFigure.Color = _crntColor;
+            //_crntFigure.Width = _crntWidth;
+
         }
 
         private void isoscelesTraingle_Click(object sender, EventArgs e)
@@ -128,6 +130,24 @@ namespace DrawMe
         private void widthBox_ValueChanged(object sender, EventArgs e)
         {
             _crntWidth = (int)widthBox.Value;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            factory = new SquareFactory();
+            //_crntFigure = new SquareFigure();
+            //_crntFigure.Color = _crntColor;
+            //_crntFigure.Width = _crntWidth;
         }
     }
 }

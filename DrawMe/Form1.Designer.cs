@@ -80,6 +80,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Кисть";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -121,6 +122,7 @@
             this.button5.TabIndex = 5;
             this.button5.Text = "Квадрат";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -151,41 +153,29 @@
             this.button8.TabIndex = 8;
             this.button8.Text = "Треугольник по трем";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // rightTraingle
             // 
-            this.rightTraingle.Location = new System.Drawing.Point(12, 562);
+            this.rightTraingle.Location = new System.Drawing.Point(14, 702);
+            this.rightTraingle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rightTraingle.Name = "rightTraingle";
-            this.rightTraingle.Size = new System.Drawing.Size(192, 49);
+            this.rightTraingle.Size = new System.Drawing.Size(216, 61);
             this.rightTraingle.TabIndex = 9;
             this.rightTraingle.Text = "Треугольник 90";
             this.rightTraingle.UseVisualStyleBackColor = true;
             this.rightTraingle.Click += new System.EventHandler(this.rightTraingle_Click);
-            this.button9.Location = new System.Drawing.Point(14, 702);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(216, 61);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "Треугольник 90";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // isoscelesTraingle
             // 
-            this.isoscelesTraingle.Location = new System.Drawing.Point(12, 617);
+            this.isoscelesTraingle.Location = new System.Drawing.Point(14, 771);
+            this.isoscelesTraingle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.isoscelesTraingle.Name = "isoscelesTraingle";
-            this.isoscelesTraingle.Size = new System.Drawing.Size(192, 49);
+            this.isoscelesTraingle.Size = new System.Drawing.Size(216, 61);
             this.isoscelesTraingle.TabIndex = 10;
             this.isoscelesTraingle.Text = "Равнобедренный";
             this.isoscelesTraingle.UseVisualStyleBackColor = true;
             this.isoscelesTraingle.Click += new System.EventHandler(this.isoscelesTraingle_Click);
-            this.button10.Location = new System.Drawing.Point(14, 771);
-            this.button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(216, 61);
-            this.button10.TabIndex = 10;
-            this.button10.Text = "Равнобедренный";
-            this.button10.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
