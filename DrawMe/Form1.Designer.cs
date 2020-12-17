@@ -30,7 +30,7 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.line = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -54,6 +54,9 @@
             this.black = new System.Windows.Forms.Button();
             this.white = new System.Windows.Forms.Button();
             this.widthBox = new System.Windows.Forms.NumericUpDown();
+            this.mover = new System.Windows.Forms.Button();
+            this.rotate = new System.Windows.Forms.Button();
+            this.changeColor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.widthBox)).BeginInit();
             this.SuspendLayout();
@@ -61,10 +64,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(399, 52);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(355, 121);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1140, 918);
+            this.pictureBox1.Size = new System.Drawing.Size(1013, 655);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
@@ -73,40 +75,37 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(14, 151);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(12, 121);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(216, 61);
+            this.button1.Size = new System.Drawing.Size(192, 49);
             this.button1.TabIndex = 1;
             this.button1.Text = "Кисть";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // line
             // 
-            this.button2.Location = new System.Drawing.Point(14, 220);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(216, 61);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Линия";
-            this.button2.UseVisualStyleBackColor = true;
+            this.line.Location = new System.Drawing.Point(12, 176);
+            this.line.Name = "line";
+            this.line.Size = new System.Drawing.Size(192, 49);
+            this.line.TabIndex = 2;
+            this.line.Text = "Линия";
+            this.line.UseVisualStyleBackColor = true;
+            this.line.Click += new System.EventHandler(this.line_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(14, 289);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Location = new System.Drawing.Point(12, 231);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(216, 61);
+            this.button3.Size = new System.Drawing.Size(192, 49);
             this.button3.TabIndex = 3;
             this.button3.Text = "Ломанная";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(14, 358);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button4.Location = new System.Drawing.Point(12, 286);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(216, 61);
+            this.button4.Size = new System.Drawing.Size(192, 49);
             this.button4.TabIndex = 4;
             this.button4.Text = "Прямоугольник";
             this.button4.UseVisualStyleBackColor = true;
@@ -114,40 +113,36 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(14, 426);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Location = new System.Drawing.Point(12, 341);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(216, 61);
+            this.button5.Size = new System.Drawing.Size(192, 49);
             this.button5.TabIndex = 5;
             this.button5.Text = "Квадрат";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(14, 495);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button6.Location = new System.Drawing.Point(12, 396);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(216, 61);
+            this.button6.Size = new System.Drawing.Size(192, 49);
             this.button6.TabIndex = 6;
             this.button6.Text = "Окружность";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(14, 564);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button7.Location = new System.Drawing.Point(12, 451);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(216, 61);
+            this.button7.Size = new System.Drawing.Size(192, 49);
             this.button7.TabIndex = 7;
             this.button7.Text = "Эллипс";
             this.button7.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(14, 632);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button8.Location = new System.Drawing.Point(12, 506);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(216, 61);
+            this.button8.Size = new System.Drawing.Size(192, 49);
             this.button8.TabIndex = 8;
             this.button8.Text = "Треугольник по трем";
             this.button8.UseVisualStyleBackColor = true;
@@ -161,14 +156,6 @@
             this.rightTraingle.Text = "Треугольник 90";
             this.rightTraingle.UseVisualStyleBackColor = true;
             this.rightTraingle.Click += new System.EventHandler(this.rightTraingle_Click);
-            this.button9.Location = new System.Drawing.Point(14, 702);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(216, 61);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "Треугольник 90";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // isoscelesTraingle
             // 
@@ -179,20 +166,12 @@
             this.isoscelesTraingle.Text = "Равнобедренный";
             this.isoscelesTraingle.UseVisualStyleBackColor = true;
             this.isoscelesTraingle.Click += new System.EventHandler(this.isoscelesTraingle_Click);
-            this.button10.Location = new System.Drawing.Point(14, 771);
-            this.button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(216, 61);
-            this.button10.TabIndex = 10;
-            this.button10.Text = "Равнобедренный";
-            this.button10.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(14, 840);
-            this.button11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button11.Location = new System.Drawing.Point(12, 672);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(216, 61);
+            this.button11.Size = new System.Drawing.Size(192, 49);
             this.button11.TabIndex = 11;
             this.button11.Text = "N-угольник";
             this.button11.UseVisualStyleBackColor = true;
@@ -200,10 +179,9 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(14, 909);
-            this.button12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button12.Location = new System.Drawing.Point(12, 727);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(216, 61);
+            this.button12.Size = new System.Drawing.Size(192, 49);
             this.button12.TabIndex = 12;
             this.button12.Text = "Правильный N-угольник";
             this.button12.UseVisualStyleBackColor = true;
@@ -211,10 +189,9 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(253, 790);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox1.Location = new System.Drawing.Point(225, 632);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(113, 24);
+            this.checkBox1.Size = new System.Drawing.Size(98, 21);
             this.checkBox1.TabIndex = 13;
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -222,9 +199,10 @@
             // 
             // clear
             // 
-            this.clear.Location = new System.Drawing.Point(225, 121);
+            this.clear.Location = new System.Drawing.Point(237, 121);
+            this.clear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.clear.Name = "clear";
-            this.clear.Size = new System.Drawing.Size(112, 49);
+            this.clear.Size = new System.Drawing.Size(100, 39);
             this.clear.TabIndex = 14;
             this.clear.Text = "Очистить форму";
             this.clear.UseVisualStyleBackColor = true;
@@ -234,39 +212,36 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(14, 52);
+            this.label1.Location = new System.Drawing.Point(12, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(345, 36);
+            this.label1.Size = new System.Drawing.Size(277, 29);
             this.label1.TabIndex = 15;
             this.label1.Text = "Панель инструментов:";
             // 
             // red
             // 
             this.red.BackColor = System.Drawing.Color.Red;
-            this.red.Location = new System.Drawing.Point(321, 220);
-            this.red.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.red.Location = new System.Drawing.Point(285, 176);
             this.red.Name = "red";
-            this.red.Size = new System.Drawing.Size(58, 61);
+            this.red.Size = new System.Drawing.Size(52, 49);
             this.red.TabIndex = 16;
             this.red.UseVisualStyleBackColor = false;
             // 
             // green
             // 
             this.green.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.green.Location = new System.Drawing.Point(321, 426);
-            this.green.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.green.Location = new System.Drawing.Point(285, 341);
             this.green.Name = "green";
-            this.green.Size = new System.Drawing.Size(58, 61);
+            this.green.Size = new System.Drawing.Size(52, 49);
             this.green.TabIndex = 17;
             this.green.UseVisualStyleBackColor = false;
             // 
             // purple
             // 
             this.purple.BackColor = System.Drawing.Color.Purple;
-            this.purple.Location = new System.Drawing.Point(321, 632);
-            this.purple.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.purple.Location = new System.Drawing.Point(285, 506);
             this.purple.Name = "purple";
-            this.purple.Size = new System.Drawing.Size(58, 61);
+            this.purple.Size = new System.Drawing.Size(52, 49);
             this.purple.TabIndex = 18;
             this.purple.UseVisualStyleBackColor = false;
             this.purple.Click += new System.EventHandler(this.purple_Click);
@@ -274,73 +249,68 @@
             // orange
             // 
             this.orange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.orange.Location = new System.Drawing.Point(321, 289);
-            this.orange.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.orange.Location = new System.Drawing.Point(285, 231);
             this.orange.Name = "orange";
-            this.orange.Size = new System.Drawing.Size(58, 61);
+            this.orange.Size = new System.Drawing.Size(52, 49);
             this.orange.TabIndex = 19;
             this.orange.UseVisualStyleBackColor = false;
             // 
             // blue
             // 
             this.blue.BackColor = System.Drawing.Color.Aqua;
-            this.blue.Location = new System.Drawing.Point(321, 495);
-            this.blue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.blue.Location = new System.Drawing.Point(285, 396);
             this.blue.Name = "blue";
-            this.blue.Size = new System.Drawing.Size(58, 61);
+            this.blue.Size = new System.Drawing.Size(52, 49);
             this.blue.TabIndex = 20;
             this.blue.UseVisualStyleBackColor = false;
             // 
             // darkBlue
             // 
             this.darkBlue.BackColor = System.Drawing.Color.Blue;
-            this.darkBlue.Location = new System.Drawing.Point(321, 564);
-            this.darkBlue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.darkBlue.Location = new System.Drawing.Point(285, 451);
             this.darkBlue.Name = "darkBlue";
-            this.darkBlue.Size = new System.Drawing.Size(58, 61);
+            this.darkBlue.Size = new System.Drawing.Size(52, 49);
             this.darkBlue.TabIndex = 21;
             this.darkBlue.UseVisualStyleBackColor = false;
             // 
             // yellow
             // 
             this.yellow.BackColor = System.Drawing.Color.Yellow;
-            this.yellow.Location = new System.Drawing.Point(321, 358);
-            this.yellow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.yellow.Location = new System.Drawing.Point(285, 286);
             this.yellow.Name = "yellow";
-            this.yellow.Size = new System.Drawing.Size(58, 61);
+            this.yellow.Size = new System.Drawing.Size(52, 49);
             this.yellow.TabIndex = 22;
             this.yellow.UseVisualStyleBackColor = false;
             // 
             // black
             // 
             this.black.BackColor = System.Drawing.Color.Black;
-            this.black.Location = new System.Drawing.Point(255, 702);
-            this.black.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.black.Location = new System.Drawing.Point(227, 562);
             this.black.Name = "black";
-            this.black.Size = new System.Drawing.Size(58, 61);
+            this.black.Size = new System.Drawing.Size(52, 49);
             this.black.TabIndex = 23;
             this.black.UseVisualStyleBackColor = false;
             // 
             // white
             // 
             this.white.BackColor = System.Drawing.Color.White;
-            this.white.Location = new System.Drawing.Point(321, 702);
-            this.white.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.white.Location = new System.Drawing.Point(285, 562);
             this.white.Name = "white";
-            this.white.Size = new System.Drawing.Size(58, 61);
+            this.white.Size = new System.Drawing.Size(52, 49);
             this.white.TabIndex = 24;
             this.white.UseVisualStyleBackColor = false;
             // 
             // widthBox
             // 
-            this.widthBox.Location = new System.Drawing.Point(225, 190);
+            this.widthBox.Location = new System.Drawing.Point(237, 176);
+            this.widthBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.widthBox.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.widthBox.Name = "widthBox";
-            this.widthBox.Size = new System.Drawing.Size(54, 22);
+            this.widthBox.Size = new System.Drawing.Size(48, 22);
             this.widthBox.TabIndex = 25;
             this.widthBox.Value = new decimal(new int[] {
             1,
@@ -349,12 +319,44 @@
             0});
             this.widthBox.ValueChanged += new System.EventHandler(this.widthBox_ValueChanged);
             // 
+            // mover
+            // 
+            this.mover.Location = new System.Drawing.Point(355, 42);
+            this.mover.Name = "mover";
+            this.mover.Size = new System.Drawing.Size(192, 49);
+            this.mover.TabIndex = 26;
+            this.mover.Text = "Двигай";
+            this.mover.UseVisualStyleBackColor = true;
+            this.mover.Click += new System.EventHandler(this.mover_Click);
+            // 
+            // rotate
+            // 
+            this.rotate.Location = new System.Drawing.Point(576, 42);
+            this.rotate.Name = "rotate";
+            this.rotate.Size = new System.Drawing.Size(192, 49);
+            this.rotate.TabIndex = 27;
+            this.rotate.Text = "Вращай";
+            this.rotate.UseVisualStyleBackColor = true;
+            // 
+            // changeColor
+            // 
+            this.changeColor.Location = new System.Drawing.Point(793, 42);
+            this.changeColor.Name = "changeColor";
+            this.changeColor.Size = new System.Drawing.Size(192, 49);
+            this.changeColor.TabIndex = 28;
+            this.changeColor.Text = "Меняй цвет";
+            this.changeColor.UseVisualStyleBackColor = true;
+            this.changeColor.Click += new System.EventHandler(this.changeColor_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1393, 798);
+            this.ClientSize = new System.Drawing.Size(1238, 638);
+            this.Controls.Add(this.changeColor);
+            this.Controls.Add(this.rotate);
+            this.Controls.Add(this.mover);
             this.Controls.Add(this.widthBox);
             this.Controls.Add(this.white);
             this.Controls.Add(this.black);
@@ -378,10 +380,9 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.line);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -396,7 +397,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button line;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
@@ -420,6 +421,9 @@
         private System.Windows.Forms.Button black;
         private System.Windows.Forms.Button white;
         private System.Windows.Forms.NumericUpDown widthBox;
+        private System.Windows.Forms.Button mover;
+        private System.Windows.Forms.Button rotate;
+        private System.Windows.Forms.Button changeColor;
     }
 }
 
